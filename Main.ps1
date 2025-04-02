@@ -1,7 +1,11 @@
 # Parameters
 param(
-    [switch]$c
+    [switch]$r
 )
+
+# Check for admin permissions
+$AdminScriptURL = "https://raw.githubusercontent.com/tools4windows/other/refs/heads/main/check-admin.ps1"
+Invoke-Expression (New-Object Net.WebClient).DownloadString($AdminScriptURL)
 
 ### Main.ps1
 Write-Host "Windows 10 Utility Scripts" -ForegroundColor Cyan
@@ -29,7 +33,7 @@ Write-Host "---------------------------------"
 Write-Host "Credits: Tools4Windows - https://github.com/Tools4Windows" -ForegroundColor Green
 
 # Credits Tools4Windows
-if ($c) {
+if ($r) {
     $MainScriptURL = "https://raw.githubusercontent.com/tools4windows/other/refs/heads/main/credits.ps1"
     Invoke-Expression (New-Object Net.WebClient).DownloadString($MainScriptURL)
 }
