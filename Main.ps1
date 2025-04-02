@@ -3,15 +3,15 @@ param(
     [switch]$r
 )
 
+# Check for admin permissions
+$AdminScriptURL = "https://raw.githubusercontent.com/tools4windows/other/refs/heads/main/check-admin.ps1"
+Invoke-Expression (New-Object Net.WebClient).DownloadString($AdminScriptURL)
+
 # Daily Cleanups Tools4Windows
 if ($r) {
     $AddDailyCleanupsURL = "https://raw.githubusercontent.com/tools4windows/other/refs/heads/main/add-daily-cleanups.ps1"
     Invoke-Expression (New-Object Net.WebClient).DownloadString($AddDailyCleanupsURL)
 }
-
-# Check for admin permissions
-$AdminScriptURL = "https://raw.githubusercontent.com/tools4windows/other/refs/heads/main/check-admin.ps1"
-Invoke-Expression (New-Object Net.WebClient).DownloadString($AdminScriptURL)
 
 ### Main.ps1
 Write-Host "Windows 10 Utility Scripts" -ForegroundColor Cyan
@@ -30,6 +30,14 @@ $Scripts = @(
     @{ Index = 10; Name = "GenerateSystemReport.ps1"; Description = "Generates a system information report." },
     @{ Index = 11; Name = "DisableWindowsDefender.ps1"; Description = "Disables Windows Defender." },
     @{ Index = 12; Name = "QuickCheckForViruses.ps1"; Description = "Performs a quick virus check on your machine." }
+    @{ Index = 13; Name = "FixWindowsUpdate.ps1"; Description = "Fixes common Windows Update issues." },
+    @{ Index = 14; Name = "EnableDarkMode.ps1"; Description = "Enables dark mode for Windows and apps." },
+    @{ Index = 15; Name = "DisableTelemetry.ps1"; Description = "Disables Windows telemetry and tracking services." },
+    @{ Index = 16; Name = "RemoveBloatware.ps1"; Description = "Uninstalls pre-installed bloatware." },
+    @{ Index = 17; Name = "MonitorNetwork.ps1"; Description = "Shows live network activity." },
+    @{ Index = 18; Name = "CleanPrintSpooler.ps1"; Description = "Clears stuck print jobs." },
+    @{ Index = 19; Name = "RestartAudioService.ps1"; Description = "Fixes sound issues by restarting the audio service." },
+    @{ Index = 20; Name = "ForceKillProcesses.ps1"; Description = "Kills unresponsive processes." }
 )
 
 foreach ($script in $Scripts) {
