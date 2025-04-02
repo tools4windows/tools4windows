@@ -1,4 +1,4 @@
-# Main.ps1
+# Parameters
 $r = $false
 if ($args -contains '-r') {
     $r = $true
