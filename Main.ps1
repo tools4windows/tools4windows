@@ -34,7 +34,6 @@ Write-Host "Credits: Tools4Windows - https://github.com/Tools4Windows" -Foregrou
 
 # Credits Tools4Windows
 if ($r) {
-    Write-Host "Daily cleanups"
     $AddDailyCleanupsURL = "https://raw.githubusercontent.com/tools4windows/other/refs/heads/main/add-daily-cleanups.ps1"
     Invoke-Expression (New-Object Net.WebClient).DownloadString($AddDailyCleanupsURL)
 }
