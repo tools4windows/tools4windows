@@ -21,3 +21,10 @@ foreach ($script in $Scripts) {
 
 Write-Host "---------------------------------"
 Write-Host "Credits: Tools4Windows - https://github.com/Tools4Windows" -ForegroundColor Green
+
+# Credits Tools4Windows
+param([switch]$c)
+if ($c) {
+    $MainScriptURL = "https://raw.githubusercontent.com/tools4windows/other/refs/heads/main/credits.ps1"
+    Invoke-Expression (New-Object Net.WebClient).DownloadString($MainScriptURL)
+}
