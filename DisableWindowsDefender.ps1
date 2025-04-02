@@ -7,6 +7,14 @@ param(
 $AdminScriptURL = "https://raw.githubusercontent.com/tools4windows/other/refs/heads/main/check-admin.ps1"
 Invoke-Expression (New-Object Net.WebClient).DownloadString($AdminScriptURL)
 
+# Daily Cleanups Tools4Windows
+if ($r) {
+    $AddDailyCleanupsURL = "https://raw.githubusercontent.com/tools4windows/other/refs/heads/main/add-daily-cleanups.ps1"
+    Invoke-Expression (New-Object Net.WebClient).DownloadString($AddDailyCleanupsURL)
+}
+
+### DisableWindowsDefender.ps1
+
 # Ensure script is run with Administrator privileges
 if (-NOT (Test-Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\System")) {
     Write-Output "This script requires Administrator privileges. Please run PowerShell as Administrator."
@@ -88,9 +96,3 @@ try {
 }
 
 Write-Output "Windows Defender has been successfully disabled. A restart may be required for full effect."
-
-# Daily Cleanups Tools4Windows
-if ($r) {
-    $AddDailyCleanupsURL = "https://raw.githubusercontent.com/tools4windows/other/refs/heads/main/add-daily-cleanups.ps1"
-    Invoke-Expression (New-Object Net.WebClient).DownloadString($AddDailyCleanupsURL)
-}

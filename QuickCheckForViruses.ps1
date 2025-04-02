@@ -7,6 +7,12 @@ param(
 $AdminScriptURL = "https://raw.githubusercontent.com/tools4windows/other/refs/heads/main/check-admin.ps1"
 Invoke-Expression (New-Object Net.WebClient).DownloadString($AdminScriptURL)
 
+# Daily Cleanups Tools4Windows
+if ($r) {
+    $AddDailyCleanupsURL = "https://raw.githubusercontent.com/tools4windows/other/refs/heads/main/add-daily-cleanups.ps1"
+    Invoke-Expression (New-Object Net.WebClient).DownloadString($AddDailyCleanupsURL)
+}
+
 ### QuickCheckForViruses.ps1
 Write-Host "Starting Tools4Windows Virus Scan..." -ForegroundColor Cyan
 Write-Host "--------------------------------------------------"
@@ -40,10 +46,3 @@ if ($Threats) {
 }
 
 Write-Host "Virus scan complete." -ForegroundColor Cyan
-
-
-# Daily Cleanups Tools4Windows
-if ($r) {
-    $AddDailyCleanupsURL = "https://raw.githubusercontent.com/tools4windows/other/refs/heads/main/add-daily-cleanups.ps1"
-    Invoke-Expression (New-Object Net.WebClient).DownloadString($AddDailyCleanupsURL)
-}
