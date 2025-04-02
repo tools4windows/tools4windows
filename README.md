@@ -14,6 +14,7 @@ A collection of PowerShell scripts to optimize, clean, and troubleshoot Windows 
 - **DisableStartupApps.ps1** - Disables unnecessary startup apps.
 - **FreeDiskSpace.ps1** - Runs Disk Cleanup to free space.
 - **GenerateSystemReport.ps1** - Generates a system information report.
+- **DisableWindowsDefender.ps1** - Disables Windows Defender.
 
 ## How to Run the Scripts
 ### 1. Open PowerShell/CMD as Administrator

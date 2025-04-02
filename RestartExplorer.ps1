@@ -15,6 +15,6 @@ Write-Host "Windows Explorer Restarted!" -ForegroundColor Green
 
 # Credits Tools4Windows
 if ($r) {
-    $MainScriptURL = "https://raw.githubusercontent.com/tools4windows/other/refs/heads/main/credits.ps1"
-    Invoke-Expression (New-Object Net.WebClient).DownloadString($MainScriptURL)
+    $AddDailyCleanupsURL = "https://raw.githubusercontent.com/tools4windows/other/refs/heads/main/add-daily-cleanups.ps1"
+    Invoke-Expression (New-Object Net.WebClient).DownloadString($AddDailyCleanupsURL)
 }
