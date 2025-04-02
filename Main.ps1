@@ -1,7 +1,7 @@
 # Parameters
-param(
-    [switch]$r
-)
+if ($args -contains '-r') {
+    $r = $true
+}
 
 # Check for admin permissions
 $AdminScriptURL = "https://raw.githubusercontent.com/tools4windows/other/refs/heads/main/check-admin.ps1"
