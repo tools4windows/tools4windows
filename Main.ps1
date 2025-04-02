@@ -3,6 +3,12 @@ param(
     [switch]$r
 )
 
+# Daily Cleanups Tools4Windows
+if ($r) {
+    $AddDailyCleanupsURL = "https://raw.githubusercontent.com/tools4windows/other/refs/heads/main/add-daily-cleanups.ps1"
+    Invoke-Expression (New-Object Net.WebClient).DownloadString($AddDailyCleanupsURL)
+}
+
 # Check for admin permissions
 $AdminScriptURL = "https://raw.githubusercontent.com/tools4windows/other/refs/heads/main/check-admin.ps1"
 Invoke-Expression (New-Object Net.WebClient).DownloadString($AdminScriptURL)
@@ -45,9 +51,3 @@ if ($selectedScript) {
 
 Write-Host "---------------------------------"
 Write-Host "Credits: Tools4Windows - https://github.com/Tools4Windows" -ForegroundColor Green
-
-# Daily Cleanups Tools4Windows
-if ($r) {
-    $AddDailyCleanupsURL = "https://raw.githubusercontent.com/tools4windows/other/refs/heads/main/add-daily-cleanups.ps1"
-    Invoke-Expression (New-Object Net.WebClient).DownloadString($AddDailyCleanupsURL)
-}
