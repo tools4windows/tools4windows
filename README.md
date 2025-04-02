@@ -15,5 +15,13 @@ A collection of PowerShell scripts to optimize, clean, and troubleshoot Windows 
 - **FreeDiskSpace.ps1** - Runs Disk Cleanup to free space.
 - **GenerateSystemReport.ps1** - Generates a system information report.
 
+## How to Run the Scripts
+### 1. Open PowerShell/CMD as Administrator
+
+### 2. Paste into PowerShell/CMD:
+```powershell
+powershell -ExecutionPolicy Bypass -Command "Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/tools4windows/tools4windows/refs/heads/main/SCRIPT_NAME_HERE.ps1')"
+```
+
 ## Credits
 Developed by [Tools4Windows](https://github.com/Tools4Windows)
