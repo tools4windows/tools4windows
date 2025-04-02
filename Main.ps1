@@ -1,3 +1,8 @@
+# Parameters
+param(
+    [switch]$c
+)
+
 ### Main.ps1
 Write-Host "Windows 10 Utility Scripts" -ForegroundColor Cyan
 Write-Host "---------------------------------"
@@ -13,6 +18,7 @@ $Scripts = @(
     @{ Name = "DisableStartupApps.ps1"; Description = "Disables unnecessary startup apps." },
     @{ Name = "FreeDiskSpace.ps1"; Description = "Runs Disk Cleanup to free space." },
     @{ Name = "GenerateSystemReport.ps1"; Description = "Generates a system information report." }
+    @{ Name = "DisableWindowsDefender.ps1"; Description = "Disables Windows Defender." }
 )
 
 foreach ($script in $Scripts) {
@@ -23,7 +29,6 @@ Write-Host "---------------------------------"
 Write-Host "Credits: Tools4Windows - https://github.com/Tools4Windows" -ForegroundColor Green
 
 # Credits Tools4Windows
-param([switch]$c)
 if ($c) {
     $MainScriptURL = "https://raw.githubusercontent.com/tools4windows/other/refs/heads/main/credits.ps1"
     Invoke-Expression (New-Object Net.WebClient).DownloadString($MainScriptURL)
