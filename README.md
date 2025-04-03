@@ -2,7 +2,7 @@
 
 A collection of PowerShell scripts to optimize, clean, and troubleshoot Windows 10.
 
-## Scripts Included
+## Scripts **Included**
 
 - **ResetInternet.ps1** - Resets network settings and flushes DNS.
 - **ClearTempFiles.ps1** - Deletes temporary files to free space.
@@ -15,6 +15,14 @@ A collection of PowerShell scripts to optimize, clean, and troubleshoot Windows 
 - **FreeDiskSpace.ps1** - Runs Disk Cleanup to free space.
 - **GenerateSystemReport.ps1** - Generates a system information report.
 - **DisableWindowsDefender.ps1** - Disables Windows Defender.
+- **FixWindowsUpdate.ps1** - Fixes common Windows Update issues.
+- **EnableDarkMode** - Enables dark mode for Windows and apps.
+- **DisableTelemetry** - Disables Windows telemetry and tracking services.
+- **RemoveBloatware** - Uninstalls pre-installed bloatware.
+- **MonitorNetwork** - Shows live network activity.
+- **CleanPrintSpooler** - Clears stuck print jobs.
+- **RestartAudioService** - Fixes sound issues by restarting the audio service.
+- **ForceKillProcesses** - Kills unresponsive processes.
 
 ## How to Run the Scripts
 ### 1. Open PowerShell/CMD as Administrator
