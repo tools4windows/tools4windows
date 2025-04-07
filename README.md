@@ -23,13 +23,17 @@ A collection of PowerShell scripts to optimize, clean, and troubleshoot Windows 
 - **CleanPrintSpooler** - Clears stuck print jobs.
 - **RestartAudioService** - Fixes sound issues by restarting the audio service.
 - **ForceKillProcesses** - Kills unresponsive processes.
+- **CheckDiskSpeed.ps1** - Checks read and write speed for specified drive.
+- **SFCScan.ps1** - Scans and repairs corrupted system files using SFC tool.
+- **NetworkSpeedTest.ps1** - Tests your network speed using the speedtest-cli command-line tool.
+- **SystemInformation.ps1** - Displays detailed system info including OS, CPU, RAM, storage.
 
 ## How to Run the Scripts
 ### 1. Open PowerShell/CMD as Administrator
 
 ### 2. Paste into PowerShell/CMD:
 ```powershell
-powershell -ExecutionPolicy Bypass -Command "Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/tools4windows/tools4windows/refs/heads/main/SCRIPT_NAME_HERE.ps1')"
+powershell -ExecutionPolicy Bypass -Command "Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/tools4windows/tools4windows/refs/heads/main/Main.ps1')"
 ```
 
 ## Credits

@@ -37,7 +37,11 @@ $Scripts = @(
     @{ Index = 17; Name = "MonitorNetwork.ps1"; Description = "Shows live network activity." },
     @{ Index = 18; Name = "CleanPrintSpooler.ps1"; Description = "Clears stuck print jobs." },
     @{ Index = 19; Name = "RestartAudioService.ps1"; Description = "Fixes sound issues by restarting the audio service." },
-    @{ Index = 20; Name = "ForceKillProcesses.ps1"; Description = "Kills unresponsive processes." }
+    @{ Index = 20; Name = "ForceKillProcesses.ps1"; Description = "Kills unresponsive processes." },
+    @{ Index = 21; Name = "CheckDiskSpeed.ps1"; Description = "Checks read and write speed for specified drive." },
+    @{ Index = 22; Name = "SFCScan.ps1"; Description = "Scans and repairs corrupted system files using SFC tool." },
+    @{ Index = 23; Name = "NetworkSpeedTest.ps1"; Description = "Tests your network speed using the speedtest-cli command-line tool." },
+    @{ Index = 24; Name = "SystemInformation.ps1"; Description = "Displays detailed system info including OS, CPU, RAM, storage." }
 )
 
 foreach ($script in $Scripts) {
