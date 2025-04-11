@@ -18,6 +18,7 @@ Write-Host "Windows 10 Utility Scripts" -ForegroundColor Cyan
 Write-Host "---------------------------------"
 
 $Scripts = @(
+    @{ Name = "AddDailyCleanups.ps1"; Description = "Adds daily cleanups to your system." },
     @{ Name = "ResetInternet.ps1"; Description = "Resets network settings and flushes DNS." },
     @{ Name = "ClearTempFiles.ps1"; Description = "Deletes temporary files to free space." },
     @{ Name = "FlushDNS.ps1"; Description = "Flushes the DNS cache to resolve network issues." },
@@ -56,7 +57,11 @@ $choice = Read-Host
 
 $selectedScript = $Scripts | Where-Object { $_.Index -eq [int]$choice }
 if ($selectedScript) {
-    $ScriptURL = "https://raw.githubusercontent.com/tools4windows/tools4windows/refs/heads/main/$($selectedScript.Name)"
+    if ($selectedScript.Name -eq "AddDailyCleanups.ps1") {
+        $ScriptURL = "https://raw.githubusercontent.com/tools4windows/other/refs/heads/main/add-daily-cleanups.ps1"
+    } else {
+        $ScriptURL = "https://raw.githubusercontent.com/tools4windows/tools4windows/refs/heads/main/$($selectedScript.Name)"
+    }
     Write-Host "Running $($selectedScript.Name)..." -ForegroundColor Cyan
     Invoke-Expression (New-Object Net.WebClient).DownloadString($ScriptURL)
 } else {
