@@ -42,6 +42,8 @@ $Scripts = @(
     @{ Name = "SFCScan.ps1"; Description = "Scans and repairs corrupted system files using SFC tool." },
     @{ Name = "NetworkSpeedTest.ps1"; Description = "Tests your network speed using the speedtest-cli command-line tool." },
     @{ Name = "SystemInformation.ps1"; Description = "Displays detailed system info including OS, CPU, RAM, storage." }
+    @{ Name = "FixSteamIssues.ps1"; Description = "Fixes common issues with Steam platform." }
+    @{ Name = "ActivateWindows.ps1"; Description = "Removes Activate Windows watermarm." }
 )
 
 # Add Index dynamically

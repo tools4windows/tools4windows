@@ -17,15 +17,12 @@ A collection of PowerShell scripts to optimize, clean, and troubleshoot Windows 
 - **FixWindowsUpdate.ps1** - Fixes common Windows Update issues.
 - **EnableDarkMode** - Enables dark mode for Windows and apps.
 - **DisableTelemetry** - Disables Windows telemetry and tracking services.
-- **RemoveBloatware** - Uninstalls pre-installed bloatware.
-- **MonitorNetwork** - Shows live network activity.
 - **CleanPrintSpooler** - Clears stuck print jobs.
 - **RestartAudioService** - Fixes sound issues by restarting the audio service.
 - **ForceKillProcesses** - Kills unresponsive processes.
 - **CheckDiskSpeed.ps1** - Checks read and write speed for specified drive.
 - **SFCScan.ps1** - Scans and repairs corrupted system files using SFC tool.
-- **NetworkSpeedTest.ps1** - Tests your network speed using the speedtest-cli command-line tool.
-- **SystemInformation.ps1** - Displays detailed system info including OS, CPU, RAM, storage.
+- And more!
 
 ## How to Run the Scripts
 ### 1. Open PowerShell/CMD as Administrator
